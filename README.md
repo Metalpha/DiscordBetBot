@@ -62,4 +62,4 @@ The bot will confirm the match deletion. You can also use `%remove`.
 * `<idmatch>` is the match id
 * `<idsb>` is the sidebet id
 
-The bot will confirm the match deletion.
+The bot will confirm the sidebet deletion.
