@@ -1,3 +1,5 @@
+// Reload command created from the Discord.js tutorial
+
 module.exports = {
 	name: 'reload',
 	description: 'Reloads a command',

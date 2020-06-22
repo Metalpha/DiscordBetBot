@@ -2,7 +2,7 @@ const fs = require('fs')
 
 module.exports = {
     name: 'list',
-    description: `Lists all active moneymatches.`,
+    description: `Lists all active matches.`,
     cooldown: 5,
     guildOnly: true,
     args: false,
@@ -20,15 +20,15 @@ module.exports = {
             }
             if(message.client.moneymatch[mm].type == 'bm'){
                 if(message.client.moneymatch[mm].player2){
-                    reply += `\`Boisson Match ${mm}: ${message.client.moneymatch[mm].player1.username} vs ${message.client.moneymatch[mm].player2.username}, BO${message.client.moneymatch[mm].length}\`\n`;
+                    reply += `\`Drink Match ${mm}: ${message.client.moneymatch[mm].player1.username} vs ${message.client.moneymatch[mm].player2.username}, BO${message.client.moneymatch[mm].length}\`\n`;
                 }
                 else{
-                    reply += `\`Boisson Match ${mm}: ${message.client.moneymatch[mm].player1.username}, BO${message.client.moneymatch[mm].length}, waiting\`\n`;
+                    reply += `\`Drink Match ${mm}: ${message.client.moneymatch[mm].player1.username}, BO${message.client.moneymatch[mm].length}, waiting\`\n`;
                 }
             }
         }
 
-        if(reply == ``) return message.channel.send(`No active moneymatches.`);
+        if(reply == ``) return message.channel.send(`No active matches.`);
 
         message.channel.send(reply);
     }

@@ -9,9 +9,9 @@ module.exports = {
     usage: '<id>',
     execute(message, args){
 
-        if(isNaN(args[0])){
+        if(isNaN(args[0])){ //If the passed id is not a number, returns
             return message.channel.send('Please provide a valid number as id');
-        }else if(!message.client.moneymatch[args[0]]){
+        }else if(!message.client.moneymatch[args[0]]){ //If the match is not found, returns
             return message.channel.send(`This moneymatch doesn't exist`);
         }
 
@@ -19,6 +19,7 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed();
 
+        //Checks if the match has two players and creates the adequate title
         if(mm.player2) embed.setTitle(`${mm.player1.username} vs ${mm.player2.username}`);
         else embed.setTitle(`${mm.player1.username} waiting for an opponent`);
 
@@ -34,9 +35,12 @@ module.exports = {
             embed.setThumbnail(`https://i.imgur.com/HXFx8rh.png`);
         }
 
+        embed.addField(`Format`, `Best-of ${mm.length}`, false);
+
         var player1sb = ``;
         var player2sb = ``;
 
+        //Adds every sidebet to each list of sidebets
         for(const sb in mm.sidebet){
             if(mm.sidebet[sb].player == mm.player1){
                 player1sb += `${mm.sidebet[sb].bettor1.username} vs. ${mm.sidebet[sb].bettor2.username}, ${mm.sidebet[sb].value}€\n`;
@@ -45,10 +49,9 @@ module.exports = {
             }
         }
 
+        //If no sidebet was made
         if(player1sb == ``) player1sb = `Pas de sidebet`;
         if(player2sb == ``) player2sb = `Pas de sidebet`;
-
-        embed.addField(`Format`, `Best-of ${mm.length}`, false);
 
         if(mm.player2){
            embed.addFields(
