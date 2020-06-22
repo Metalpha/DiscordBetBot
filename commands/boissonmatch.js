@@ -10,7 +10,7 @@ module.exports = {
     usage: '<length> [pseudo]',
     execute(message, args){
 
-        if(isNaN(args[0]) || !(args[0]%2)){
+        if(isNaN(args[0]) || !(args[0]%2) || (args[0]<=0)){
             return message.channel.send('Please provide a valid number as BO length');
         }else if(!message.mentions.users.size){
             if(args[1]){
