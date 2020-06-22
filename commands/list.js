@@ -18,7 +18,7 @@ module.exports = {
                     reply += `\`Moneymatch ${mm}: ${message.client.moneymatch[mm].player1.username}, ${message.client.moneymatch[mm].value}€, BO${message.client.moneymatch[mm].length}, waiting\`\n`;
                 }
             }
-            if(message.client.moneymatch[mm].type == 'bm'){
+            if(message.client.moneymatch[mm].type == 'dm'){
                 if(message.client.moneymatch[mm].player2){
                     reply += `\`Drink Match ${mm}: ${message.client.moneymatch[mm].player1.username} vs ${message.client.moneymatch[mm].player2.username}, BO${message.client.moneymatch[mm].length}\`\n`;
                 }
