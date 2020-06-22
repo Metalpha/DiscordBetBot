@@ -26,12 +26,12 @@ module.exports = {
         if(mm.type == 'mm'){
             embed.setDescription(`Moneymatch`);
             embed.setColor('#32a864');
-            embed.addField(`Mise`, `${mm.value}€`, false);
+            embed.addField(`Bet`, `${mm.value}€`, false);
             embed.setThumbnail(`https://i.imgur.com/bh4KYDy.png`);
         }else{
-            embed.setDescription(`Boisson Match`);
+            embed.setDescription(`Drink Match`);
             embed.setColor('#e6d765');
-            embed.addField(`Récompense`, `Boisson`, false);
+            embed.addField(`Bet`, `Drink`, false);
             embed.setThumbnail(`https://i.imgur.com/HXFx8rh.png`);
         }
 
@@ -50,8 +50,8 @@ module.exports = {
         }
 
         //If no sidebet was made
-        if(player1sb == ``) player1sb = `Pas de sidebet`;
-        if(player2sb == ``) player2sb = `Pas de sidebet`;
+        if(player1sb == ``) player1sb = `No sidebet`;
+        if(player2sb == ``) player2sb = `No sidebet`;
 
         if(mm.player2){
            embed.addFields(
