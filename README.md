@@ -12,6 +12,12 @@ Start the bot by running
 ```Node bot.js```
 
 ### Commands
+#### Help
+`%help [command]`
+
+* `[command]` is the command you need help on (optionnal)
+
+Gives you a list of all commands in DM. If a command is specified, gives the usage for this command.
 #### Create a moneymatch
 `%moneymatch <value> <length> [pseudo]`
 
@@ -63,3 +69,5 @@ The bot will confirm the match deletion. You can also use `%remove`.
 * `<idsb>` is the sidebet id
 
 The bot will confirm the sidebet deletion.
+#### Others commands
+More commands are available for devs use. They are listed and explained further in the code.
