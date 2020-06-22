@@ -46,6 +46,7 @@ The bot will confirm the sidebet creation and return the **id** you'll use later
 * `<id>` is the match id
 
 The bot will respond with an embed message giving all info on a match.
+
 ![Image of match info](https://i.imgur.com/WhB9AcC.png)
 #### Clear all matches
 `%clear`
