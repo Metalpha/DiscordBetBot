@@ -20,6 +20,8 @@ module.exports = {
             return message.channel.send(`This sidebet doesn't exist`);
         }
 
+        if(message.author != message.client.moneymatch[args[0]].sidebet[args[1]].bettor1 && message.author != message.client.moneymatch[args[0]].sidebet[args[1]].bettor2) return message.channel.send("You must be one of the bettors to remove a sidebet.");
+
         delete message.client.moneymatch[args[0]].sidebet[args[1]];
 
         //Writes the changes to ./moneymatch.json

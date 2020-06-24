@@ -16,6 +16,10 @@ module.exports = {
             return message.channel.send(`This moneymatch doesn't exist`);
         }
 
+        if(message.author != message.client.moneymatch[args[0]].player1 && message.author != message.client.moneymatch[args[0]].player2){
+            return message.channel.send("You must be one of the players to delete a match.")
+        }
+
         delete message.client.moneymatch[args[0]];
 
         //Writes the changes to ./moneymatch.json
