@@ -59,6 +59,10 @@ module.exports = {
                 { name: `${mm.player2.username} wins sidebets`, value: player2sb, inline: true}
             ); 
         }
+
+        if(mm.note){
+            embed.addField('Note', mm.note, false)
+        }
         
 
         message.channel.send(embed);
