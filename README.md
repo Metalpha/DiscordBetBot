@@ -46,6 +46,13 @@ Gives a complete list of all matches with main details.
 * `<member>` is the guild member you make the bet with
 
 The bot will confirm the sidebet creation and return the **id** you'll use later. You can also use `%sb`.
+#### Add a note
+`%note <id> <text>`
+
+* `<id>` is the match id
+* `<text>` is the note text
+
+The bot will confirm the note creation. Only one note can be created per match.
 #### Get info on a match
 `%info <id>`
 
