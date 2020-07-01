@@ -29,7 +29,7 @@ module.exports = {
 
     //Finds the first available id for the sidebet
     var idsb = 0;
-    while(message.client.moneymatch[args[0]].sidebet[idsb]){
+    while(mm.sidebet[idsb]){
         idsb++;
     }
 
