@@ -5,7 +5,7 @@ const fs = require('fs')
 const Discord = require('discord.js');
 
 const prefix = process.env.PREFIX
-const token = process.env.TOKEN
+const token = process.env.DISCORD_TOKEN
 
 const client = new Discord.Client();
 client.moneymatch = require("./moneymatch.json");
